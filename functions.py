@@ -40,11 +40,11 @@ def r_inputs(spchar,q2):
     sum=0
     for i in spchar:
         total_spchar.append(spchar[i])
-    for i in total_spchar:
-        sum=sum+i
+    for i in range(1,len(total_spchar)):
+        sum=sum+total_spchar[i]
     total_spchar.append(int(q2)) 
     total_spchar.append(sum)
-    total_spchar.append(round(sum/spchar['url_length'],2))
+    total_spchar.append(round(sum/spchar['url_length'],2)*10)
     inputs=np.array(total_spchar)
     inputs=np.expand_dims(inputs,axis=0)
     return inputs
