@@ -3,7 +3,9 @@ import numpy as np
 import pickle
 import functions
 
+
 model = pickle.load(open('model_13.pkl','rb'))
+
 # Use the loaded model for predictions or further training
 scaler=pickle.load(open('scaler.pkl','rb'))
 
